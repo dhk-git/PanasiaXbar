@@ -1,0 +1,47 @@
+﻿@page "/"
+
+@if (XbarRangeModels == null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div id="xbarChart" style="width:100%;height:300px"></div>
+    <div id="rangeChart" style="width:100%;height:300px"></div>
+
+    <table class="table table-bordered" style="text-align:center;vertical-align:middle">
+        <thead>
+            <tr>
+                <th rowspan="2" style="vertical-align:middle">No</th>
+                <th colspan="4">Xbar</th>
+                <th colspan="4">Range</th>
+            </tr>
+            <tr>
+                <th>Xbar</th>
+                <th>UCL</th>
+                <th>CL</th>
+                <th>LCL</th>
+                <th>Range</th>
+                <th>UCL</th>
+                <th>CL</th>
+                <th>LCL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var testModel in XbarRangeModels)
+            {
+                <tr>
+                    <td>@testModel.SubGroupNo</td>
+                    <td>@testModel.Xbar</td>
+                    <td>@testModel.XbarUcl</td>
+                    <td>@testModel.XbarCl</td>
+                    <td>@testModel.XbarLcl</td>
+                    <td>@testModel.Range</td>
+                    <td>@testModel.RangeUcl</td>
+                    <td>@testModel.RangeCl</td>
+                    <td>@testModel.RangeLcl</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
