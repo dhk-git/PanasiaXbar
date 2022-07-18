@@ -1,11 +1,25 @@
 ﻿@page "/"
 
+@if (Cp == null || Cpk == null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <h2>Cp : @Cp</h2>
+    <h2>Cpk : @Cpk</h2>
+}
+
+
+
 @if (XbarRangeModels == null)
 {
     <h3>Loading...</h3>
 }
 else
 {
+
+    
     <div id="xbarChart" style="width:100%;height:300px"></div>
     <div id="rangeChart" style="width:100%;height:300px"></div>
 
