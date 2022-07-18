@@ -1,6 +1,6 @@
 ﻿function AddXbarChart(id, data, title) {
     var echart = echarts.init(document.getElementById(id));
-    console.log(data);
+    //console.log(data);
     var xAxis = new Array();
     var xbar = new Array();
     var xbarUcl = new Array();
@@ -20,11 +20,10 @@
     var xbarMax = Math.max(...xbar);
     var xbarMin = Math.min(...xbar);
 
-    var yAxisMax = Math.max(uclMax, xbarMax);
-  
-    var yAxisMin = Math.min(lclMin, xbarMin);
+    var yAxisMax = Math.max(uclMax, xbarMax); //UCL과 측정값중 큰값
+    var yAxisMin = Math.min(lclMin, xbarMin); //LCL과 측정값중 작은값
     
-    console.log(yAxisMax);
+    //console.log(yAxisMax);
     var option = {
         title: {
             text: title
@@ -105,7 +104,7 @@ function AddRangeChart(id, data, title) {
 
     var yAxisMin = Math.min(lclMin, xbarMin);
 
-    console.log(yAxisMax);
+    //console.log(yAxisMax);
     var option = {
         title: {
             text: title
