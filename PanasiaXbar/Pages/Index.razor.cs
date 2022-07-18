@@ -52,13 +52,13 @@ namespace PanasiaXbar.Pages
             //range mean
             controlModel.RangeMean = Math.Round(subGroupModels.Average(x => x.Range), 3);
             //xbar
-            controlModel.XbarUcl = Math.Round(controlModel.XbarMean + controlModel.RangeMean * XbarFactor.GetFactor(ColumName.A2, _subGroupCount), 3);
+            controlModel.XbarUcl = Math.Round(controlModel.XbarMean + controlModel.RangeMean * XbarFactor.GetFactor(VariableName.A2, _subGroupCount), 3);
             controlModel.XbarCl = controlModel.XbarMean;
-            controlModel.XbarLcl = Math.Round(controlModel.XbarMean - controlModel.RangeMean * XbarFactor.GetFactor(ColumName.A2, _subGroupCount), 3);
+            controlModel.XbarLcl = Math.Round(controlModel.XbarMean - controlModel.RangeMean * XbarFactor.GetFactor(VariableName.A2, _subGroupCount), 3);
             //Range
-            controlModel.RangeUcl = Math.Round(controlModel.RangeMean * XbarFactor.GetFactor(ColumName.D4, _subGroupCount), 3);
+            controlModel.RangeUcl = Math.Round(controlModel.RangeMean * XbarFactor.GetFactor(VariableName.D4, _subGroupCount), 3);
             controlModel.RangeCl = controlModel.RangeMean;
-            controlModel.RangeLcl = Math.Round(controlModel.RangeMean * XbarFactor.GetFactor(ColumName.D3, _subGroupCount), 3);
+            controlModel.RangeLcl = Math.Round(controlModel.RangeMean * XbarFactor.GetFactor(VariableName.D3, _subGroupCount), 3);
 
             List<XbarRangeModel> xbarRangeModels = new List<XbarRangeModel>();
             int subGroupNo = 1;

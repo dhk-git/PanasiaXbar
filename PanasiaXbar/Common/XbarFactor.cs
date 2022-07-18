@@ -2,11 +2,11 @@
 {
     public static class XbarFactor
     {
-        public static decimal GetFactor(ColumName columName, int n)
+        public static decimal GetFactor(VariableName variableName, int n)
         {
-            switch (columName)
+            switch (variableName)
             {
-                case ColumName.A2:
+                case VariableName.A2:
                     switch (n)
                     {
                         case 2:
@@ -30,7 +30,7 @@
                         default:
                             return 0M;
                     }
-                case ColumName.D3:
+                case VariableName.D3:
                     switch (n)
                     {
                         case 2:
@@ -54,7 +54,7 @@
                         default:
                             return 0M;
                     }
-                case ColumName.D4:
+                case VariableName.D4:
                     switch (n)
                     {
                         case 2:
@@ -84,7 +84,7 @@
         }
     }
 
-    public enum ColumName
+    public enum VariableName
     {
         A2,
         D3,
